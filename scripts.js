@@ -43,12 +43,3 @@ function playsection5()
   vid.currentTime=95;
   vid.play();
 }
-
-function highlightButton()
-{
-  var vid = document.getElementById("thelab");
-  while(vid.currentTime<= 16)
-  {
-    document.getElementById("button1").style.background-color = "white";
-  }
-}
