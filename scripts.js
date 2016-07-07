@@ -1,6 +1,7 @@
 function playVid() {
   var vid = document.getElementById("thelab");
     vid.play();
+
 }
 
 function pauseVid() {
