@@ -1,6 +1,6 @@
 video {
   display: block;
-  margin: 0 auto;
+ /* margin: 0 auto;*/
 }
 
 h1 {
@@ -16,13 +16,13 @@ button {
   width: 150px;
   height: 30px;
   margin: 5px;
-  float: left;
-}
+ }
 
 }
 body {
   background-color: White;
 }
 
-sideContent {float:left;}
-VideoDIV {float:right;}
+.Content {
+	float:left;
+}
