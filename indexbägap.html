@@ -17,7 +17,7 @@
 
       <div><button onclick="pauseVid()" type="button">Pause Video</button></div>
 
-      <div><button onclick="playsection1()" type="button"> Introduction</button></div>
+      <div><button id="button1" onclick="playsection1()" type="button"> Introduction</button></div>
 
       <div><button onclick="playsection2()" type="button"> Photo shooting</button></div>
 
@@ -33,5 +33,7 @@
         </video>
       </div>
     </div>
+    <script>vid = document.getElementById("thelab")
+    vid.addEventListener(vid.currenTime==16, highlight());</script>
   </body>
   </html>

@@ -1,3 +1,5 @@
+
+
 function playVid() {
   var vid = document.getElementById("thelab");
     vid.play();
@@ -43,4 +45,14 @@ function playsection5()
   var vid = document.getElementById("thelab");
   vid.currentTime=95;
   vid.play();
+}
+
+function getTime(event) {
+    // The currentTime property returns the current position of the audio/video playback
+    document.getElementById("time").innerHTML = event.currentTime;
+}
+
+function highlight()
+{
+  document.getElementById('button1').style.color =  "White";
 }
