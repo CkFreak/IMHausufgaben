@@ -25,3 +25,10 @@ body {
 .Content {
 	float:left;
 }
+
+#Container {
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+}
