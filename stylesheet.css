@@ -1,0 +1,28 @@
+video {
+  display: block;
+  margin: 0 auto;
+}
+
+h1 {
+	font-family: Verdana;
+	font-weight: bold;
+	color:Gray;
+  text-align: center
+}
+
+button {
+  border: 2px solid Black;
+  background-color: Gray;
+  width: 150px;
+  height: 30px;
+  margin: 5px;
+  float: left;
+}
+
+}
+body {
+  background-color: White;
+}
+
+sideContent {float:left;}
+VideoDIV {float:right;}
