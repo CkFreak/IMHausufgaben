@@ -6,12 +6,22 @@ window.addEventListener("load", function () {
 	outro = 173;
 	
     video.addEventListener("timeupdate", function () {
-		if (this.currentTime >= timeToStop) {
-            this.pause();
+		if (this.currentTime <= introduction && this.currentTime > photoShooting) {
+            highlight("button1");
         }
-    }, false);
-	
-	
+		
+		if(this.currentTime <= photoShooting && this.currentTime > showdown) {
+			highlight("button2");
+		}
+		
+		if(this.currentTime <= showdown && this.currentTime > outro) {
+			highlight("button3");
+		}	
+		
+		if(this.currentTime <= outro && this.currentTime > this.duration) {
+			highlight("button4");
+		}
+    }, false);	
 }, false);
 
 function playVid() {
@@ -24,7 +34,6 @@ function pauseVid() {
   var vid = document.getElementById("thelab");
     vid.pause();
 }
-
 
 function playSectionIntroduction()
 {
@@ -61,24 +70,5 @@ function getTime(event) {
 
 function highlight(para)
 {
-  document.getElementById(para).style.color =  "White";
-}
-
-function update()
-{
-
-    if(!video.paused && !video.ended)
-    {
-
-        if(video.currentTime >= 16)
-            {
-                highlight('button1');
-            }
-        else if(video.currentTime >= 41)
-            {
-                highlight('button2');
-            }
-
-        setTimeout(function(){update();}, 100);
-    }
+  document.getElementById(para).style.background-color =  "white";
 }
