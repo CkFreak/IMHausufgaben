@@ -1,27 +1,44 @@
 window.addEventListener("load", function () {
 	var video = document.getElementById("thelab");
 	introduction = 16;
-	photoShooting = 42;
+	photoShooting = 41;
 	showdown = 95;
 	outro = 173;
 
-    video.addEventListener("timeupdate", function () {
-		if (this.currentTime >= introduction)
+    video.addEventListener("timeupdate", function () 
+	{
+	
+	if (this.currentTime >= introduction && this.currentTime < photoShooting)
     {
-            highlight('button1');
-          }
-    if (this.currentTime >= photoShooting)
+		highlight('button1');
+	}
+	else{
+		unHighlight('button1');
+	}
+	
+    if (this.currentTime >= photoShooting && this.currentTime < showdown)
     {
-            highlight('button2')
+		highlight('button2');
     }
-    if (this.currentTime >= showdown)
+	else{
+		unHighlight('button2');
+	}
+	
+    if (this.currentTime >= showdown && this.currentTime < outro)
     {
-            highlight('button3')
+		highlight('button3');
     }
-    if (this.currentTime >= outro)
+	else{
+		unHighlight('button3');
+	}
+	
+    if (this.currentTime >= outro && this.currentTime < this.duration)
     {
-            highlight('button4')
+		highlight('button4');
     }
+	else{
+		unHighlight('button4');
+	}
 
 
     }, false);
@@ -82,23 +99,4 @@ function highlight(para)
 function unHighlight(para)
 {
   document.getElementById(para).style.color =  "Black";
-}
-
-function update()
-{
-
-    if(!video.paused && !video.ended)
-    {
-
-        if(video.currentTime >= 16)
-            {
-                highlight('button1');
-            }
-        else if(video.currentTime >= 41)
-            {
-                highlight('button2');
-            }
-
-        setTimeout(function(){update();}, 100);
-    }
 }
