@@ -5,7 +5,7 @@ window.addEventListener("load", function () {
 	showdown = 95;
 	outro = 173;
 
-    video.addEventListener("timeupdate", function () 
+    video.addEventListener("timeupdate", function ()
 	{
 	if (this.currentTime >= introduction && this.currentTime < photoShooting)
     {
@@ -13,14 +13,14 @@ window.addEventListener("load", function () {
 	}
 	else{
 		unHighlight('button1');
-	}	
+	}
     if (this.currentTime >= photoShooting && this.currentTime < showdown)
     {
 		highlight('button2');
     }
 	else{
 		unHighlight('button2');
-	}	
+	}
     if (this.currentTime >= showdown && this.currentTime < outro)
     {
 		highlight('button3');
@@ -87,7 +87,7 @@ function getTime(event) {
 
 function highlight(para)
 {
-  document.getElementById(para).style.color =  "White";
+  document.getElementById(para).style.color =  "magenta";
 }
 
 function unHighlight(para)
