@@ -4,12 +4,17 @@ window.addEventListener("load", function () {
 	photoShooting = 41;
 	showdown = 95;
 	outro = 173;
-
+	var introductionText = "IM macht Spaß.";
+	var photoShootingText = "Es war so wenig Arbeitsaufwand wie dieses Design schön ist."
+	var showdownText = "Keine Ahnung zu haben macht mega Spaß."
+	var outroText = "Vor allem wenn man keine klaren Anweisungen bekommt. Yey."
+	
     video.addEventListener("timeupdate", function () 
 	{
 	if (this.currentTime >= introduction && this.currentTime < photoShooting)
     {
 		highlight('button1');
+		writeText(introductionText);
 	}
 	else{
 		unHighlight('button1');
@@ -17,6 +22,7 @@ window.addEventListener("load", function () {
     if (this.currentTime >= photoShooting && this.currentTime < showdown)
     {
 		highlight('button2');
+		writeText(photoShootingText);
     }
 	else{
 		unHighlight('button2');
@@ -24,6 +30,7 @@ window.addEventListener("load", function () {
     if (this.currentTime >= showdown && this.currentTime < outro)
     {
 		highlight('button3');
+		writeText(showdownText);
     }
 	else{
 		unHighlight('button3');
@@ -31,6 +38,7 @@ window.addEventListener("load", function () {
     if (this.currentTime >= outro && this.currentTime < this.duration)
     {
 		highlight('button4');
+		writeText(outroText);
     }
 	else{
 		unHighlight('button4');
@@ -93,5 +101,9 @@ function highlight(para)
 function unHighlight(para)
 {
   document.getElementById(para).style.color =  "Black";
+}
 
+function writeText(para)
+{
+	document.getElementById("Text").innerHTML = para;
 }
