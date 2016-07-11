@@ -7,23 +7,20 @@ window.addEventListener("load", function () {
 
     video.addEventListener("timeupdate", function () 
 	{
-	
 	if (this.currentTime >= introduction && this.currentTime < photoShooting)
     {
 		highlight('button1');
 	}
 	else{
 		unHighlight('button1');
-	}
-	
+	}	
     if (this.currentTime >= photoShooting && this.currentTime < showdown)
     {
 		highlight('button2');
     }
 	else{
 		unHighlight('button2');
-	}
-	
+	}	
     if (this.currentTime >= showdown && this.currentTime < outro)
     {
 		highlight('button3');
@@ -31,10 +28,9 @@ window.addEventListener("load", function () {
 	else{
 		unHighlight('button3');
 	}
-	
     if (this.currentTime >= outro && this.currentTime < this.duration)
     {
-	highlight('button4');
+		highlight('button4');
     }
 	else{
 		unHighlight('button4');
@@ -89,13 +85,13 @@ function getTime(event) {
     document.getElementById("time").innerHTML = event.currentTime;
 }
 
-function highlight(para, para2)
+function highlight(para)
 {
   document.getElementById(para).style.color =  "White";
-  unHighlight(para2);
 }
 
 function unHighlight(para)
 {
   document.getElementById(para).style.color =  "Black";
+
 }
