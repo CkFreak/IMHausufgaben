@@ -52,7 +52,7 @@ function getTime(event) {
     document.getElementById("time").innerHTML = event.currentTime;
 }
 
-function highlight()
+function highlight(para)
 {
-  document.getElementById('button1').style.color =  "White";
+  document.getElementById(para).style.color =  "White";
 }

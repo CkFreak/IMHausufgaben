@@ -13,21 +13,21 @@
 
   <div id = "Container">
     <div class ="Content">
-      <div><button onclick="playVid()" type="button">Play Video</button></div>
+      <div><button onclick="playVid(); eins = setTimeout(function() {highlight('button1')}, 16000); zwei = setTimeout(function() {highlight('button2')}, 41000); drei = setTimeout(function() {highlight('button3')}, 95000); vier = setTimeout(function() {highlight('button4')}, 173000);" type="button">Play Video</button></div>
 
       <div><button onclick="pauseVid()" type="button">Pause Video</button></div>
 
-      <div><button id="button1" onclick="playsection1()" type="button"> Introduction</button></div>
+      <div><button id="button1" onclick="playsection1(); setTimeout(function() {highlight('button2')}, 25000); clearTimeout(eins); highlight('button1');" type="button"> Introduction</button></div>
 
-      <div><button onclick="playsection2()" type="button"> Photo shooting</button></div>
+      <div><button id="button2" onclick="playsection2(); setTimeout(function() {highlight('button3')}, 54000); clearTimeout(eins); clearTimeout(zwei); highlight('button1'); highlight('button2');" type="button"> Photo shooting</button></div>
 
-      <div><button onclick="playsection5()" type="button"> Showdown </button></div>
+      <div><button id="button3" onclick="playsection5(); setTimeout(function() {highlight('button4')}, 78000); clearTimeout(eins); clearTimeout(zwei); clearTimeout(drei); highlight('button1'); highlight('button2'); highlight('button3');" type="button"> Showdown </button></div>
 
-      <div><button onclick="playsection4()" type="button"> Outro </button></div>
+      <div><button id="button4" onclick="playsection4(); clearTimeout(eins); clearTimeout(zwei); clearTimeout(drei); clearTimeout(vier); highlight('button4');" type="button"> Outro </button></div>
     </div>
 
     <div class = "Content">
-      <video id="thelab" width="720" height="420">
+      <video id="thelab" width="720" height="420" controls>
         <source src="thelab.mp4" type="video/mp4">
           Dein Browser ist wahrscheinlich zu alt du Otto.
         </video>
