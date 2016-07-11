@@ -18,7 +18,7 @@ window.addEventListener("load", function () {
 	}
 	else{
 		unHighlight('button1');
-	}	
+	}
     if (this.currentTime >= photoShooting && this.currentTime < showdown)
     {
 		highlight('button2');
@@ -26,7 +26,7 @@ window.addEventListener("load", function () {
     }
 	else{
 		unHighlight('button2');
-	}	
+	}
     if (this.currentTime >= showdown && this.currentTime < outro)
     {
 		highlight('button3');
@@ -95,7 +95,7 @@ function getTime(event) {
 
 function highlight(para)
 {
-  document.getElementById(para).style.color =  "White";
+  document.getElementById(para).style.color =  "magenta";
 }
 
 function unHighlight(para)

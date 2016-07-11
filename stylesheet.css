@@ -3,9 +3,9 @@ video {
 }
 
 h1 {
-	font-family: Verdana;
+	font-family: "Comic Sans MS";
 	font-weight: bold;
-	color:Gray;
+	color:magenta;
   text-align: center
 }
 
@@ -15,6 +15,8 @@ button {
   width: 150px;
   height: 30px;
   margin: 5px;
+  font-family: "Comic Sans MS";
+
  }
 
 }
