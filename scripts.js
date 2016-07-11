@@ -1,3 +1,18 @@
+window.addEventListener("load", function () {
+	var video = document.getElementById("thelab");
+	introduction = 16;
+	photoShooting = 42;
+	showdown = 95;
+	outro = 173;
+	
+    video.addEventListener("timeupdate", function () {
+		if (this.currentTime >= timeToStop) {
+            this.pause();
+        }
+    }, false);
+	
+	
+}, false);
 
 function playVid() {
   var vid = document.getElementById("thelab");
@@ -5,55 +20,37 @@ function playVid() {
 
 }
 
-window.addEventListener("load", function () {
-    var video = document.getElementById("thelab"),
-        timeToStop = 2;
-
-    video.addEventListener("timeupdate", function () {
-        if (this.currentTime >= timeToStop) {
-            this.pause();
-        }
-    }, false);
-}, false);
-
 function pauseVid() {
   var vid = document.getElementById("thelab");
     vid.pause();
 }
 
 
-function playsection1()
+function playSectionIntroduction()
 {
   var vid = document.getElementById("thelab");
   vid.currentTime=16;
   vid.play();
 }
 
-function playsection2()
+function playSectionPhotoShooting()
 {
   var vid = document.getElementById("thelab");
   vid.currentTime=41;
   vid.play();
 }
 
-function playsection3()
-{
-  var vid = document.getElementById("thelab");
-  vid.currentTime=3;
-  vid.play();
-}
-
-function playsection4()
-{
-  var vid = document.getElementById("thelab");
-  vid.currentTime=173;
-  vid.play();
-}
-
-function playsection5()
+function playSectionShowdown()
 {
   var vid = document.getElementById("thelab");
   vid.currentTime=95;
+  vid.play();
+}
+
+function playSectionOutro()
+{
+  var vid = document.getElementById("thelab");
+  vid.currentTime=173;
   vid.play();
 }
 
