@@ -34,15 +34,13 @@ window.addEventListener("load", function () {
 	
     if (this.currentTime >= outro && this.currentTime < this.duration)
     {
-		highlight('button4');
+	highlight('button4');
     }
 	else{
 		unHighlight('button4');
 	}
 
-
     }, false);
-
 
 }, false);
 
@@ -91,9 +89,10 @@ function getTime(event) {
     document.getElementById("time").innerHTML = event.currentTime;
 }
 
-function highlight(para)
+function highlight(para, para2)
 {
   document.getElementById(para).style.color =  "White";
+  unHighlight(para2);
 }
 
 function unHighlight(para)
