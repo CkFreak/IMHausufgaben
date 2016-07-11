@@ -4,8 +4,8 @@ window.addEventListener("load", function () {
 	photoShooting = 41;
 	showdown = 95;
 	outro = 173;
-	var introductionText = "'IM macht Spaß.";
-	var photoShootingText = "Es war so wenig Arbeitsaufwand wie dieses Design schön ist."
+	var introductionText = "IM macht Spaß.";
+	var photoShootingText = "Es war so wenig Arbeitsaufwand, wie dieses Design schön ist."
 	var showdownText = "Keine Ahnung zu haben macht mega Spaß."
 	var outroText = "Vor allem wenn man keine klaren Anweisungen bekommt. Yey."
 
