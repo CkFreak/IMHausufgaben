@@ -60,7 +60,7 @@ function highlight(para)
 function update()
 {
 
-    if(video.paused == false && video.ended == false)
+    if(!video.paused && !video.ended)
     {
 
         if(video.currentTime >= 16)
@@ -72,6 +72,6 @@ function update()
                 highlight('button2');
             }
 
-        setTimeout(function(){updateTime();}, 100);
+        setTimeout(function(){update();}, 100);
     }
 }
