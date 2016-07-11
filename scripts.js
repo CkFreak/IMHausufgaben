@@ -1,10 +1,20 @@
 
-sa
 function playVid() {
   var vid = document.getElementById("thelab");
     vid.play();
 
 }
+
+window.addEventListener("load", function () {
+    var video = document.getElementById("thelab"),
+        timeToStop = 2;
+
+    video.addEventListener("timeupdate", function () {
+        if (this.currentTime >= timeToStop) {
+            this.pause();
+        }
+    }, false);
+}, false);
 
 function pauseVid() {
   var vid = document.getElementById("thelab");
