@@ -32,6 +32,8 @@ body {
 }
 
 #Text {
+  font-family: "Comic Sans MS";
+  color: magenta;
   width:700px;
   float:left;
   min-height: 500px;
