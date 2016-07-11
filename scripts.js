@@ -1,5 +1,5 @@
 
-
+sa
 function playVid() {
   var vid = document.getElementById("thelab");
     vid.play();
@@ -55,4 +55,23 @@ function getTime(event) {
 function highlight(para)
 {
   document.getElementById(para).style.color =  "White";
+}
+
+function update()
+{
+
+    if(video.paused == false && video.ended == false)
+    {
+
+        if(video.currentTime >= 16)
+            {
+                highlight('button1');
+            }
+        else if(video.currentTime >= 41)
+            {
+                highlight('button2');
+            }
+
+        setTimeout(function(){updateTime();}, 100);
+    }
 }
