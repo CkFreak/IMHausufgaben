@@ -8,19 +8,19 @@ window.addEventListener("load", function () {
     video.addEventListener("timeupdate", function () {
 		if (this.currentTime >= introduction)
     {
-            highlight('button1');
+            highlight('button1', 'button4');
           }
     if (this.currentTime >= photoShooting)
     {
-            highlight('button2')
+            highlight('button2', 'button1');
     }
     if (this.currentTime >= showdown)
     {
-            highlight('button3')
+            highlight('button3', 'button2');
     }
     if (this.currentTime >= outro)
     {
-            highlight('button4')
+            highlight('button4', 'button3');
     }
 
 
@@ -74,9 +74,10 @@ function getTime(event) {
     document.getElementById("time").innerHTML = event.currentTime;
 }
 
-function highlight(para)
+function highlight(para, para2)
 {
   document.getElementById(para).style.color =  "White";
+  unHighlight(para2);
 }
 
 function unHighlight(para)
